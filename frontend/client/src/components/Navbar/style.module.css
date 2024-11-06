@@ -1,0 +1,131 @@
+.container,
+.div_status {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    justify-content: space-around;
+    padding: 12px 0px 16px 0px;
+}
+
+.div_status {
+    display: flex;
+    justify-content: space-around;
+    padding: 6px 18px;
+    align-items: center;
+    width: 40%;
+}
+.div_status div {
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+}
+.div_status p,
+.div_status div {
+    font-family: 'VisbyRoundy', sans-serif;
+}
+@media (max-width: 764px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .div_status {
+        flex-direction: column;
+        width: 80%;
+    }
+}
+
+/* STATUS  DE APIS*/
+.ball_offline,
+.ball_online,
+.ball_lentidao {
+    position: relative;
+}
+.ball_lentidao > p {
+    position: relative;
+    z-index: 2;
+    margin-left: 5px;
+}
+.ball_online > p {
+    position: relative;
+    z-index: 2;
+    margin-left: 5px;
+}
+.ball_offline > p {
+    position: relative;
+    z-index: 2;
+    margin-left: 5px;
+}
+
+.ball_offline::after {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    height: 100%;
+    background-color: rgba(248, 126, 126, 0.523);
+    border-radius: 50px;
+    left: 0px;
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+.ball_online::before {
+    content: ' ';
+    position: absolute;
+    background-color: rgba(155, 248, 126, 0.646);
+    border-radius: 50px;
+    left: 0px;
+    bottom: 50%;
+    transform: translateY(50%);
+    width: 100%;
+    height: 100%;
+}
+
+.ball_lentidao::before {
+    content: ' ';
+    position: absolute;
+    background-color: rgb(248, 248, 126);
+    border-radius: 50px;
+    left: 0px;
+    bottom: 50%;
+    transform: translateY(50%);
+    width: 100%;
+    height: 100%;
+}
+
+.btn_suporte,
+.btn_servicos {
+    padding: 8px 28px;
+    text-decoration: none;
+    font-family: 'VisbyRoundy', sans-serif;
+}
+
+.btn_servicos {
+    background-color: rgba(90, 172, 239, 0.429);
+    border: 1px solid rgb(91, 91, 246);
+    border-radius: 3px;
+}
+
+/* MOBILE STYLES */
+.ctn_mobile {
+    background-color: #ddd;
+    position: fixed;
+    height: 100%;
+}
+.ctn_mobile > div {
+    border: 2px solid red;
+}
+.menu_mobile {
+    display: flex;
+}
+.shadow_mobile {
+    width: 100%;
+    border: 2px solid red;
+    background-color: black;
+}
