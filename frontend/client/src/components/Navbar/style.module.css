@@ -7,8 +7,34 @@
 
 .container {
     width: 100%;
+    position: fixed;
+    z-index: 5;
     justify-content: space-around;
     padding: 12px 0px 16px 0px;
+    box-shadow: 0px 10px 14px rgba(0, 0, 0, 0.133);
+}
+.filter {
+    position: relative;
+    width: 100%;
+}
+.filter > svg {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.filter > input {
+    height: 40px;
+    color: #111;
+    font-family: 'Poppins', sans-serif;
+}
+
+.filter > input:focus {
+    outline: none;
+    box-shadow: 0px 10px 10px rgba(167, 167, 244, 0.427);
+}
+.filter > input:hover {
+    cursor: pointer;
 }
 
 .div_status {
@@ -16,14 +42,14 @@
     justify-content: space-around;
     padding: 6px 18px;
     align-items: center;
-    width: 40%;
+    width: 50%;
 }
 .div_status div {
     padding: 6px;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
-    width: 100px;
+    /* min-width: 125px; */
 }
 .div_status p,
 .div_status div {
@@ -128,4 +154,66 @@
     width: 100%;
     border: 2px solid red;
     background-color: black;
+}
+
+/* STYLES MOBILE */
+.container_mobile {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    z-index: 999;
+    height: 100vh;
+    position: fixed;
+    width: 100vw;
+}
+
+.close_icon {
+    position: absolute;
+    right: 35px;
+    top: 25px;
+    border: none;
+    background-color: transparent;
+}
+.close_icon > svg {
+    z-index: 2;
+    fill: #eee;
+    font-size: 26px;
+}
+.close_icon > svg:hover {
+    cursor: pointer;
+}
+.servicos_mobile {
+    position: absolute;
+    bottom: 20px;
+}
+.content_mobile {
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+.sombra {
+    background-color: #111111a4;
+}
+.menu_open_mobile {
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: rgb(193, 193, 246);
+    border: 2px solid rgba(25, 25, 120, 0.556);
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.06);
+    border-radius: 7px;
+    width: 90%;
+    height: 40px;
+    display: flex;
+    justify-content: end;
+    padding: 0px 20px;
+    align-items: center;
+}
+.menu_open_mobile > button {
+    background-color: transparent;
+    border: none;
+}
+.menu_open_mobile > button > svg {
+    font-size: 30px;
 }

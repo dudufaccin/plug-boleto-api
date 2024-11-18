@@ -46,13 +46,13 @@
     overflow: hidden;
     width: 100% !important;
     display: flex;
-    border-radius: 28px;
+    border-radius: 2px;
 }
 .ag-courses-item_link {
     display: block;
     width: 100% !important;
     padding: 30px 50px;
-    background-color: #121212;
+    background-color: #181616;
     position: relative;
     /* NAO TIRAR RELATIVE */
 }
@@ -69,8 +69,8 @@
 .ag-courses-item_title {
     overflow: hidden;
     text-align: center;
-    font-weight: bold;
-    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
     color: #fff !important;
     z-index: 2;
     margin: 0 auto;
@@ -89,13 +89,14 @@
     transition: color 0.5s ease;
 }
 .ag-courses-item_bg {
-    height: 128px;
-    width: 128px;
+    height: 85px;
+    width: 188px;
     z-index: 1;
     position: absolute;
     top: -75px;
+    transition: 1.8 all ease-in;
     right: -75px;
-    border-radius: 50%;
+    border-radius: 50px;
 
     -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;

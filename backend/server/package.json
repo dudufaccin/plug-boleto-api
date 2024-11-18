@@ -11,20 +11,27 @@
     "license": "ISC",
     "description": "",
     "dependencies": {
+        "@prisma/client": "^5.22.0",
+        "@types/node-cron": "^3.0.11",
+        "axios": "^1.7.7",
         "dotenv": "^16.4.5",
+        "drizzle-orm": "^0.36.1",
         "express": "^4.21.1",
         "fs": "^0.0.1-security",
+        "node-cron": "^3.0.3",
         "path": "^0.12.7",
         "pg": "^8.13.1",
         "pg-hstore": "^2.3.4",
-        "process": "^0.11.10"
+        "process": "^0.11.10",
+        "recharts": "^2.13.3"
     },
     "devDependencies": {
         "@types/express": "^5.0.0",
         "@types/node": "^22.8.7",
-        "@types/sequelize": "^4.28.20",
-        "sequelize": "^6.37.5",
+        "@types/pg": "^8.11.10",
+        "drizzle-kit": "^0.28.0",
         "ts-node": "^10.9.2",
+        "tsx": "^4.19.2",
         "typescript": "^5.6.3"
     }
 }
