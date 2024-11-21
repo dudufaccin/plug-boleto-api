@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import 'dotenv/config';
 import express, { Request, Response } from 'express';
 import { Pool } from 'pg';
@@ -5,6 +6,11 @@ import axios from 'axios';
 import cron from 'node-cron';
 import { db } from '../config/database/database';
 import { sql } from 'drizzle-orm';
+=======
+import dotenv from "dotenv";
+import express from "express";
+import { sequelize } from "./database";
+>>>>>>> 2f95cefc020ede9cc16f8421d63cad1c2604e70f
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -16,7 +22,9 @@ const pool = new Pool({
 
 // Middleware para tratar JSON
 app.use(express.json());
+dotenv.config();
 
+<<<<<<< HEAD
 // Lista dos bancos e suas URLs de consulta
 const banks = [
     { code: 'BB', name: 'Banco do Brasil' },
@@ -120,3 +128,35 @@ app.get('/api/requests', async (req, res) => {
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });
+=======
+// Conectar ao banco de dados
+sequelize
+  .authenticate()
+  .then(() => {
+    console.log("Conexão com o banco de dados estabelecida com sucesso.");
+  })
+  .catch((err: any) => {
+    console.error("Erro ao conectar ao banco de dados:", err);
+  });
+
+// Sincronizar modelos
+const syncModels = async () => {
+  try {
+    await sequelize.sync({ alter: true }); // 'alter' altera as tabelas se necessário
+    console.log("Modelos sincronizados com sucesso.");
+  } catch (error) {
+    console.error("Erro ao sincronizar modelos:", error);
+  }
+};
+
+// Iniciar o servidor
+const startServer = async () => {
+  await syncModels(); // Chame a função de sincronização
+  app.listen(port, () => {
+    console.log(`Servidor rodando na porta ${port}`);
+  });
+};
+
+// Chamar a função para iniciar o servidor
+startServer();
+>>>>>>> 2f95cefc020ede9cc16f8421d63cad1c2604e70f
