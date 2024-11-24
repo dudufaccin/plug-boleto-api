@@ -78,6 +78,12 @@
     justify-content: center;
     margin: 0 auto;
 }
+@media (max-width: 768px) {
+    .container_propaganda {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
 
 .container_propaganda > img {
     width: 95%;

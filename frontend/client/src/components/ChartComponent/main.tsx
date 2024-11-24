@@ -15,7 +15,7 @@ export default function Home() {
     const [data, setData] = useState<DataPoint[]>([]);
     useEffect(() => {
         const getData = async () => {
-            const result = await FetchData();
+            const result = await FetchData('itau_consulta');
             // Convertendo 'delay' de string para número
             const formattedData = result.map((item) => ({
                 ...item,

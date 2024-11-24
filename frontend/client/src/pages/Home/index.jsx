@@ -4,40 +4,9 @@ import classes from './style.module.css';
 import CardAPI from '../../components/CardAPIS/index';
 import technospeed from '../../assets/images/fundo_technsopeed.jpg';
 import Home from '../../components/ChartComponent/main.tsx';
-// import FetchData from './';
-
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Cell } from 'recharts';
-
 const Index = () => {
     const [data, setData] = useState([]);
-    const [selectedBank, setSelectedBank] = useState('BBConsulta'); // Bank filter state
-
-    // Função que simula a obtenção dos dados
-    // const getData = async () => {
-    // const result = await FetchData();
-
-    // Filtra os dados com base no banco selecionado
-    // const filteredData = result.filter((item) => item.name === selectedBank);
-
-    // Convertendo 'delay' de string para número
-    // const formattedData = filteredData.map((item) => ({
-    //     ...item,
-    //     delay: parseInt(item.delay.replace('ms', '')),
-    // }));
-
-    // Calculando a média dos delays
-    // const totalDelay = formattedData.reduce((sum, item) => sum + item.delay, 0);
-    // const averageDelay = totalDelay / formattedData.length;
-
-    // Definindo um limite para considerar 'muito acima da média'
-
-    //     setData(dataWithFlags);
-    // };
-
-    // useEffect(() => {
-    //     getData();
-    // }, [selectedBank]); // Recarregar os dados quando o banco selecionado mudar
-
+    const [selectedBank, setSelectedBank] = useState('bb_consulta'); // Bank filter state
     const [escuro, setEscuro] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
 

@@ -4,16 +4,14 @@ import logoTechnospeed from '../../assets/images/logoTechnospeed.png';
 import { AiOutlineClose } from 'react-icons/ai';
 import { IoMenu } from 'react-icons/io5';
 import { IoSearch } from 'react-icons/io5';
-
+import plugboleto_mobile from '../../assets/images/plugboleto_mobile.jpg';
 const Navbar = ({ escuro, onClick, onSearching }) => {
     const [width] = useState(window.innerWidth);
     const isMobilePage = width <= 768;
     const [menuOpen, setMenuOpen] = useState(false);
-
     const handleMenu = () => {
         setMenuOpen((prevEvent) => !prevEvent);
     };
-
     const background = escuro ? '#1B213B' : '#fff';
     const iconColor = escuro ? '#FFF' : '#111';
     const textColor = escuro ? '#FFF' : '#111';
@@ -22,17 +20,7 @@ const Navbar = ({ escuro, onClick, onSearching }) => {
         return (
             <header className={classes.container} style={{ color: textColor, backgroundColor: background }}>
                 <img src={logoTechnospeed} alt="Logo Technospeed" />
-
                 <div className={classes.div_status}>
-                    {/* <div className={classes.ball_offline} style={{ color: textColor }}>
-                        <p>offline</p>
-                    </div>
-                    <div className={classes.ball_online} style={{ color: textColor }}>
-                        <p>online</p>
-                    </div>
-                    <div className={classes.ball_lentidao} style={{ color: textColor }}>
-                        <p>lentidão</p>
-                    </div> */}
                     <div className={classes.filter}>
                         <input
                             type="text"
@@ -80,20 +68,17 @@ const Navbar = ({ escuro, onClick, onSearching }) => {
             <>
                 {!menuOpen && (
                     <div className={classes.menu_open_mobile}>
-                        <div className={classes.filter_mobile}>
-                            <input
-                                type="text"
-                                placeholder="Pesquisar API..."
-                                onChange={(e) => onSearching(e.target.value)} // Atualiza o termo de pesquisa no Index
-                                style={{
-                                    padding: '5px',
-                                    borderRadius: '4px',
-                                    border: '1px solid #ccc',
-                                    width: '100%',
-                                }}
-                            />
-                            <IoSearch />
-                        </div>
+                        <input
+                            className={classes.menu_open_mobile}
+                            type="text"
+                            placeholder="Pesquisar API..."
+                            onChange={(e) => onSearching(e.target.value)} // Atualiza o termo de pesquisa no Index
+                            style={{
+                                border: 'transparent',
+                                width: '80vw',
+                                height: '100%',
+                            }}
+                        />
                         {!menuOpen && (
                             <button onClick={handleMenu}>
                                 <IoMenu />
@@ -122,6 +107,7 @@ const Navbar = ({ escuro, onClick, onSearching }) => {
                                     Nossos Serviços
                                 </a>
                             </div>
+                            <img className={classes.img_mobile} src={plugboleto_mobile} alt="" />
                         </div>
                         <div className={classes.sombra}></div>
                     </div>

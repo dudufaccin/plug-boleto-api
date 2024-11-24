@@ -1,7 +1,6 @@
 const FetchData = async () => {
     // Simulando uma chamada assíncrona ao backend
     return [
-        // Para facilitar, vamos gerar dinamicamente os registros
         ...Array.from({ length: 30 }, (_, index) => {
             const minutes = (index + 6) * 5; // Incremento de 5 minutos
             const date = new Date('2024-05-09T10:00:00');
